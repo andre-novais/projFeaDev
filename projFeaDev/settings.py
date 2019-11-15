@@ -124,7 +124,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR,"static"),
 )
 
-STATIC_ROOT = '/static/'
+STATIC_ROOT = ''
 
 PROJECT_ROOT= os.path.abspath(os.path.dirname(__file__))
 TEMPLATES = [{
