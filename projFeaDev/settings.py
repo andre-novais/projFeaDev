@@ -120,7 +120,9 @@ USE_TZ = True
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['appFeaDev/static',]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,"static"),
+)
 
 PROJECT_ROOT= os.path.abspath(os.path.dirname(__file__))
 TEMPLATES = [{
