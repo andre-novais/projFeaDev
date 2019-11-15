@@ -13,9 +13,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(PROJECT_DIR)
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -121,14 +121,12 @@ USE_TZ = True
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = (
- #   os.path.join(PROJECT_DIR, 'static'),
-#)
-STATICFILES_DIRS=('. /static',)
+STATICFILES_DIRS = (
+   os.path.join(PROJECT_ROOT, 'static'),
+)
+STATICFILES_DIRS=('/static',)
 
 
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 PROJECT_ROOT= os.path.abspath(os.path.dirname(__file__))
 TEMPLATES = [{
